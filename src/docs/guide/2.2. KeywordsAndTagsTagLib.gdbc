@@ -1,0 +1,38 @@
+Let's assume that you build an application which shows some kind of a content having a piece of html code:
+{code}
+<p id="article">
+    This is a piece of very interesting information related with Grails framework
+</p>
+{code}
+
+For SEO purposes, you'd like to emphasize important words in the text, e.g. Grails, so you change your gsp like that:
+{code}
+<kat:wrapWordsWithTag words="${['grails', 'INFORMATION']}" tagName="em">
+    <p id="article">
+        This is a piece of very interesting information related with Grails framework
+    </p>
+</kat:wrapWordsWithTag>
+{code}
+
+It will eventually produce following html code:
+{code}
+<p id="article">
+    This is a piece of very interesting <em>information</em> related with <em>Grails</em> framework
+</p>
+{code}
+
+You can also provide additional attribute @className@, e.g.
+{code}
+<kat:wrapWordsWithTag words="${['grails', 'INFORMATION']}" tagName="em" className="red italic">
+    <p id="article">
+        This is a piece of very interesting information related with Grails framework
+    </p>
+</kat:wrapWordsWithTag>
+{code}
+
+This time, rendered html will look like this:
+{code}
+<p id="article">
+    This is a piece of very interesting <em class='red italic'>information</em> related with <em class='red italic'>Grails</em> framework
+</p>
+{code}
