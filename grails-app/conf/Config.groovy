@@ -1,5 +1,7 @@
 // configuration for plugin testing - will not be included in the plugin zip
 
+grails.project.groupId = 'pl.reg0.grailsplugins.keywordsandtags'
+
 log4j = {
     // Example of changing the log pattern for the default console
     // appender:
