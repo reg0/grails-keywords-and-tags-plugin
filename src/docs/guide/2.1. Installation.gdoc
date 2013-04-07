@@ -1,4 +1,4 @@
-Keywords and Tags plugin can be easily installed from the command line by typing
+Keywords and Tags plugin can be easily installed from the command line by typing:
 {code}
 grails install-plugin keywords-and-tags
 {code}

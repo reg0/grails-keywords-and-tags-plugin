@@ -1,1 +1,1 @@
-This plugin provides a simple tag library that is able to wrap words in your view with a tag and optional class attribute. It can be used to highlight keywords or tags in contents of your page for SEO purposes.
+This plugin provides a simple tag library that is able to wrap words in your view with an html tag and optional class attribute. It can be used to highlight keywords or tags in the content of your page for SEO purposes.

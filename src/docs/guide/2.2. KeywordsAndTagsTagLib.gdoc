@@ -21,7 +21,7 @@ It will eventually produce following html code:
 </p>
 {code}
 
-You can also provide additional attribute @className@, e.g.
+You can also provide additional attribute @className@, e.g.:
 {code}
 <kat:wrapWordsWithTag words="${['grails', 'INFORMATION']}" tagName="em" className="red italic">
     <p id="article">
