@@ -1,23 +1,23 @@
-Let's assume that you build an application which shows some kind of a content having a piece of html code:
+The main tool provided by the plugin is @KeywordsAndTagsTagLib@. Using it, you can wrap given keywords in the part of your gsp. The TagLib provides @<kat:wrapWordsWithTag />@ tag which accepts following attributes:
+{table}
+ *attribute* | *meaning*
+ words | a list of Strings containing words that you want to be wrapped
+ tagName | (optional) an html tag with which the words should be wrapped, e.g. "strong"
+ className | (optional) a class to be assigned to html tags wrapping your keywords
+{table}
+
+Here's a simple example of usage in gsp file:
 {code}
-<p id="article">
-    This is a piece of very interesting information related with Grails framework
+<p id="article-content">
+    <kat:wrapWordsWithTag words="${['grails', 'INFORMATION']}" tagName="em">
+        This is a piece of very interesting information related with Grails framework
+    </kat:wrapWordsWithTag>
 </p>
 {code}
-
-For SEO purposes, you'd like to emphasize important words in the text, e.g. Grails, so you change your gsp like that:
+The TagLib will take the content placed in its inner html, find given words in it (case insensitive) and wrap them with a tag of given tagName. The rendered html code from this piece of gsp will look like:
 {code}
-<kat:wrapWordsWithTag words="${['grails', 'INFORMATION']}" tagName="em">
-    <p id="article">
-        This is a piece of very interesting information related with Grails framework
-    </p>
-</kat:wrapWordsWithTag>
-{code}
-
-It will eventually produce following html code:
-{code}
-<p id="article">
-    This is a piece of very interesting <em>information</em> related with <em>Grails</em> framework
+<p id="article-content">
+  This is a piece of very interesting <em>information</em> related with <em>Grails</em> framework
 </p>
 {code}
 
